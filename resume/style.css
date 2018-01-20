@@ -113,7 +113,7 @@ body {
 
 .CV-secondaryHeading {
   position: relative;
-  margin: 2em 0 0;
+  margin: 0.5em 0 0;
   /* text-transform: uppercase; */
 }
 
@@ -196,6 +196,10 @@ body {
 
 .CV-detail--twitter:before {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/CV_icons_email.svg");
+}
+
+.CV-detail--segmentfault:before {
+  background-image: url("https://static.segmentfault.com/v-5a61bad4/global/img/touch-icon.png");
 }
 
 .CV-detail--github:before {
@@ -383,6 +387,7 @@ body {
   display: block;
   font-size: 0.8em;
   color: #6f6f6f;
+  margin-top: 5px;
 }
 
 .CV-timeline-details {
@@ -413,6 +418,10 @@ body {
   text-align: right;
   font-variant: small-caps;
   color: #a2a2a2;
+}
+
+.CV-education-group .CV-timeline-details-item {
+  font-size: 14px;
 }
 
 /* PRINT STYLES
