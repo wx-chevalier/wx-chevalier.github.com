@@ -93,18 +93,18 @@ body {
 
 .CV-primaryHeading {
   /* text-transform: uppercase; */
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .CV-primaryHeading-name {
-  display: block;
+  display: inline-block;
   margin-bottom: 0.2em;
   font-size: 1.8em;
   line-height: 0.9;
 }
 
 .CV-primaryHeading-position {
-  display: block;
+  display: inline-block;
   font-size: 1em;
   line-height: 1;
   color: #00aef0;
@@ -394,7 +394,7 @@ body {
   display: block;
   margin: 0;
   padding-bottom: 2em;
-  padding: 0 0 2em 1em;
+  padding: 0 0 1em 1em;
   list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGElEQVQIW2NkYGD4D8TIgJERTQDMpVAQAGaUAQbko3DsAAAAAElFTkSuQmCC");
 }
 
@@ -420,7 +420,7 @@ body {
   color: #a2a2a2;
 }
 
-.CV-education-group .CV-timeline-details-item {
+.CV-timeline-details-item {
   font-size: 14px;
 }
 
