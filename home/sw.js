@@ -10,7 +10,6 @@ var __wpo = {
       "./github-icon.png",
       "./",
       "./manifest.json",
-      "./static.js",
       "./favicon.ico"
     ],
     "additional": [],
@@ -25,14 +24,13 @@ var __wpo = {
     "14ae3150b98068cc4be1fe6fdb69984da5ae9b5a": "./vendors.e0e3c131ecd0e3f0166f.chunk.js",
     "73495720eb93d022e5781e0d293fafcb081366fe": "./runtime.894be82221269eff7715.js",
     "ea4a5e1ea628eefadc4fedc9e37251b88d1535f1": "./github-icon.png",
-    "b7115ef944b0a6dab7fba2089837f9b43396962a": "./",
+    "cda887cefefde0ad32ae0b3a0612e733a065fa04": "./",
     "c50ca2d0f43a75ca42f3affa14c5089683a35c34": "./manifest.json",
-    "cd16a5fa0e4814f50a00eaf60861d9d4372f2e0e": "./static.js",
     "c6775c7e01476d085366725b3d5e66acf15ab5d8": "./favicon.ico"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2018-9-24 15:02:31",
+  "version": "2018-9-24 15:09:31",
   "name": "webpack-offline",
   "pluginVersion": "5.0.5",
   "relativePaths": false
