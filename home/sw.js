@@ -1,14 +1,14 @@
 var __wpo = {
   "assets": {
     "main": [
-      "./effbe9f5855719063849.worker.js",
-      "./app.99e14f48f7671b4a1d2b.css",
-      "./app.99e14f48f7671b4a1d2b.chunk.js",
-      "./vendors.978369980edab6b6d85a.css",
-      "./vendors.978369980edab6b6d85a.chunk.js",
+      "./dd87b11b69837580afa4.worker.js",
+      "./app.cae690ae5514e5f1d706.css",
+      "./app.cae690ae5514e5f1d706.chunk.js",
+      "./vendors.4bf4011ea15dd9537bb2.css",
+      "./vendors.4bf4011ea15dd9537bb2.chunk.js",
       "./runtime.894be82221269eff7715.js",
-      "./",
       "./github-icon.png",
+      "./",
       "./manifest.json",
       "./favicon.ico"
     ],
@@ -17,20 +17,20 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "71f496f83b57795ea5af0eab6ae15e3c86db9a88": "./effbe9f5855719063849.worker.js",
-    "24beeef41e4a7c17b5071d973b4acb840453452f": "./app.99e14f48f7671b4a1d2b.css",
-    "d13bf8d112925db2d7c400e64405d1b1de7264dc": "./app.99e14f48f7671b4a1d2b.chunk.js",
-    "8a9f0040a12fa156210d26b8d31ed0d0d545c314": "./vendors.978369980edab6b6d85a.css",
-    "150f8b7670c7389836e1aa3832bdaa835bd313e5": "./vendors.978369980edab6b6d85a.chunk.js",
+    "71f496f83b57795ea5af0eab6ae15e3c86db9a88": "./dd87b11b69837580afa4.worker.js",
+    "6d5d22ed1026ad207a7e63af8076cee71e1a11c4": "./app.cae690ae5514e5f1d706.css",
+    "715b4f064ea2780b5209feeedeb6274b46644831": "./app.cae690ae5514e5f1d706.chunk.js",
+    "9e65fda0b857810f4bfaf131623bffbb610602f9": "./vendors.4bf4011ea15dd9537bb2.css",
+    "d120c139230bfba2016c147d3b9289615166a1a2": "./vendors.4bf4011ea15dd9537bb2.chunk.js",
     "73495720eb93d022e5781e0d293fafcb081366fe": "./runtime.894be82221269eff7715.js",
-    "5b93ecb0b1eb003b2807895be9ed27770c96683b": "./",
     "ea4a5e1ea628eefadc4fedc9e37251b88d1535f1": "./github-icon.png",
+    "f0eecfabe6abfd670798e692833c64f3817721d7": "./",
     "c50ca2d0f43a75ca42f3affa14c5089683a35c34": "./manifest.json",
     "c6775c7e01476d085366725b3d5e66acf15ab5d8": "./favicon.ico"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2018-9-26 00:09:22",
+  "version": "2018-9-30 15:19:18",
   "name": "webpack-offline",
   "pluginVersion": "5.0.5",
   "relativePaths": false
