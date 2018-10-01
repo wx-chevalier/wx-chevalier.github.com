@@ -2,13 +2,13 @@ var __wpo = {
   "assets": {
     "main": [
       "./a91141afa114f3970046.worker.js",
-      "./app.28a18797362a156beea9.css",
-      "./app.28a18797362a156beea9.chunk.js",
+      "./app.23298a6f69c07386f7e5.css",
+      "./app.23298a6f69c07386f7e5.chunk.js",
       "./vendors.b36103acb49bcfb64e0b.css",
       "./vendors.b36103acb49bcfb64e0b.chunk.js",
       "./runtime.894be82221269eff7715.js",
-      "./github-icon.png",
       "./",
+      "./github-icon.png",
       "./manifest.json",
       "./favicon.ico"
     ],
@@ -18,19 +18,19 @@ var __wpo = {
   "externals": [],
   "hashesMap": {
     "71f496f83b57795ea5af0eab6ae15e3c86db9a88": "./a91141afa114f3970046.worker.js",
-    "78201981feff0bcf977b47e58724501997d9f6d7": "./app.28a18797362a156beea9.css",
-    "73f4bba98a5d5d8c93deefcd0095e2b768e927e7": "./app.28a18797362a156beea9.chunk.js",
+    "78201981feff0bcf977b47e58724501997d9f6d7": "./app.23298a6f69c07386f7e5.css",
+    "4004fbe07a3fc895dab705dfcc373d72ed6e9bf1": "./app.23298a6f69c07386f7e5.chunk.js",
     "9e65fda0b857810f4bfaf131623bffbb610602f9": "./vendors.b36103acb49bcfb64e0b.css",
     "7f87fb956d85088a5ba697a963906f1624ebd887": "./vendors.b36103acb49bcfb64e0b.chunk.js",
     "73495720eb93d022e5781e0d293fafcb081366fe": "./runtime.894be82221269eff7715.js",
+    "726f45c6f428084d84014412232194590d245086": "./",
     "ea4a5e1ea628eefadc4fedc9e37251b88d1535f1": "./github-icon.png",
-    "e1f96ff6f91a9fe703299d9d7efa14e6fcedf82b": "./",
     "c50ca2d0f43a75ca42f3affa14c5089683a35c34": "./manifest.json",
     "c6775c7e01476d085366725b3d5e66acf15ab5d8": "./favicon.ico"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2018-10-1 14:41:07",
+  "version": "2018-10-1 14:44:25",
   "name": "webpack-offline",
   "pluginVersion": "5.0.5",
   "relativePaths": false
