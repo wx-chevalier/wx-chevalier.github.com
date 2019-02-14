@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Github Stars</title>
+  </head>
 
-<head>
-	<title>Github Stars</title>
-</head>
-
-<body>
-	Checkout the console!
-	<script>
-		/*
+  <body>
+    Checkout the console!
+    <script>
+      /*
 
   github-stars.js - v1
   JavaScript library for counting stars on a repo or user/org
@@ -37,65 +36,64 @@
 
 */
 
-		(function (exports) {
-			exports.githubStars = function (repo, callback) {
-				var xmlhttp = new XMLHttpRequest(),
-					url = ["https://api.github.com"],
-					useCallback = (typeof (callback) == "function");
+      (function(exports) {
+        exports.githubStars = function(repo, callback) {
+          var xmlhttp = new XMLHttpRequest(),
+            url = ['https://api.github.com'],
+            useCallback = typeof callback == 'function';
 
-				//count the stars
-				function countStars(response) {
-					//don't care, just make it an array
-					if (!(response instanceof Array)) {
-						response = [response];
-					}
-					//start the count
-					var stars = 0;
+          //count the stars
+          function countStars(response) {
+            //don't care, just make it an array
+            if (!(response instanceof Array)) {
+              response = [response];
+            }
+            //start the count
+            var stars = 0;
 
-					for (var i in response) {
-						stars += parseInt(response[i].stargazers_count);
-					}
+            for (var i in response) {
+              stars += parseInt(response[i].stargazers_count);
+            }
 
-					return stars;
-				}
+            return stars;
+          }
 
-				//determine if we're looking at a collection or a single repo
-				repo = repo.split("/");
+          //determine if we're looking at a collection or a single repo
+          repo = repo.split('/');
 
-				if (repo.length === 1) {
-					url.push("users", repo[0], "repos");
-				} else {
-					url.push("repos", repo[0], repo[1]);
-				}
+          if (repo.length === 1) {
+            url.push('users', repo[0], 'repos');
+          } else {
+            url.push('repos', repo[0], repo[1]);
+          }
 
-				//check if we were given a callback, if so we set that up
-				if (useCallback) {
-					xmlhttp.onreadystatechange = function () {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-							callback(countStars(JSON.parse(xmlhttp.responseText)));
-						}
-					}
-				}
+          //check if we were given a callback, if so we set that up
+          if (useCallback) {
+            xmlhttp.onreadystatechange = function() {
+              if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                callback(countStars(JSON.parse(xmlhttp.responseText)));
+              }
+            };
+          }
 
-				xmlhttp.open("GET", url.join("/"), useCallback);
-				//set the github media header
-				xmlhttp.setRequestHeader("Accept", "application/vnd.github.v3+json");
-				xmlhttp.send();
+          xmlhttp.open('GET', `${url.join('/')}?per_page=100`, useCallback);
+          //set the github media header
+          xmlhttp.setRequestHeader('Accept', 'application/vnd.github.v3+json');
+          xmlhttp.send();
 
-				if (!useCallback) {
-					//no callback, just wait for the response
-					return countStars(JSON.parse(xmlhttp.responseText));
-				}
-			}
-		})(typeof exports !== 'undefined' ? exports : window);
-	</script>
-	<script>
-		alert(githubStars("wxyyxc1992"));
-		console.log("No Callback: " + githubStars("wxyyxc1992"));
-		githubStars("wxyyxc1992", function (stars) {
-			console.log("Callback: " + stars);
-		});
-	</script>
-</body>
-
+          if (!useCallback) {
+            //no callback, just wait for the response
+            return countStars(JSON.parse(xmlhttp.responseText));
+          }
+        };
+      })(typeof exports !== 'undefined' ? exports : window);
+    </script>
+    <script>
+      alert(githubStars('wxyyxc1992'));
+      console.log('No Callback: ' + githubStars('wxyyxc1992'));
+      githubStars('wxyyxc1992', function(stars) {
+        console.log('Callback: ' + stars);
+      });
+    </script>
+  </body>
 </html>
