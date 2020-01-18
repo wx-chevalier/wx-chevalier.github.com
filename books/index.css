@@ -171,6 +171,8 @@ aside {
 	margin: 32px;
 	width: 32px;
 	height: 16px;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .theme-switch input {
@@ -178,7 +180,8 @@ aside {
 }
 
 .theme-switch::before {
-	padding-left: 48px content: '🌗';
+	padding-left: 48px;
+	content: '🌗';
 	cursor: pointer;
 }
 
@@ -214,11 +217,11 @@ aside {
 	transition: all .2s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
 	background-color: var(--light-bg-color);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
 	transform: translateX(16px);
 }
 
@@ -363,6 +366,7 @@ article {
 
 .book {
 	display: flex;
+	justify-content: center;
 	margin: 16px;
 	padding: 32px;
 	border-radius: 32px;
@@ -394,6 +398,8 @@ article {
 	transition: all .2s;
 	transform: translate(0, -64px);
 	animation: zoomin .5s;
+	width: 150px;
+
 }
 
 .thumbnail:hover {
