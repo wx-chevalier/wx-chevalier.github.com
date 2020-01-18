@@ -322,7 +322,7 @@ article {
 .category {
 	display: flex;
 	margin: 16px;
-	height: 25vh;
+	height: 15vh;
 	border-radius: 16px;
 	background-position: center center;
 	background-size: cover;
@@ -367,10 +367,16 @@ article {
 .book {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	margin: 16px;
 	padding: 32px;
 	border-radius: 32px;
 	flex: 1;
+}
+
+.book a {
+	display: flex;
+	justify-content: center;
 }
 
 .categories {
@@ -392,7 +398,6 @@ article {
 }
 
 .thumbnail {
-	margin-right: 32px;
 	border-radius: 16px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 	transition: all .2s;
