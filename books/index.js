@@ -3,7 +3,7 @@ let searchBooks = document.getElementById("search-box");
 
 /** @start 添加元素 */
 [
-  { id: "resource", title: "参考资料、书籍、视频、开源项目", icon: "" },
+  { id: "resource", title: "知识体系、书籍、视频、开源项目", icon: "" },
   { id: "pl", title: "编程语言", icon: "" },
   { id: "se", title: "数据结构、算法、软件架构", icon: "" },
   { id: "fe", title: "Web、大前端、可视化", icon: "" },
