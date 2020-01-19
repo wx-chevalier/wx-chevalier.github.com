@@ -1,191 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no"
+    />
+    <title>NGTE Books</title>
+    <meta name="description" content="NGTE Books" />
+    <link rel="icon" href="favicon.ico" />
+    <meta itemprop="name" content="Books" />
+    <meta itemprop="description" content="NGTE Books" />
+    <meta itemprop="image" content="icons/icon-192x192.png" />
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- See https://goo.gl/qRE0vM -->
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Books" />
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Books" />
+    <!-- Homescreen icons -->
+    <link rel="apple-touch-icon" href="icons/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="icons/icon-96x96.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="icons/icon-192x192.png"
+    />
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="icons/icon-144x144.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- OpenGraph -->
+    <meta property="og:site_name" content="Books" />
+    <meta property="og:url" content="https://wx-chevalier.github.io/books" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Books" />
+    <meta property="og:description" content="Find books from NGTE" />
+    <meta property="og:image" content="icons/icon-144x144.png" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@wx-chevalier" />
+    <meta name="twitter:creator" content="@wx-chevalier" />
+    <meta name="twitter:url" content="https://wx-chevalier.github.io/books" />
+    <meta name="twitter:title" content="Books" />
+    <meta name="twitter:description" content="Find books from NGTE" />
+    <meta name="twitter:image" content="icons/icon-144x144.png" />
+    <!-- Web Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:500,600,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Scripts -->
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+          navigator.serviceWorker
+            .register("sw.js")
+            .then(function(registration) {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            })
+            .catch(function(err) {
+              console.log("ServiceWorker registration failed: ", err);
+            });
+        });
+      }
+    </script>
+    <style>
+      #_hj-f5b2a1eb-9b07_feedback_open {
+        height: 350px;
+        width: 400px;
+        background-color: white;
+      }
+    </style>
+  </head>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
-	<title>NGTE Books</title>
-	<meta name="description" content="NGTE Books">
-	<link rel="icon" href="favicon.ico">
-	<meta itemprop="name" content="Books">
-	<meta itemprop="description" content="NGTE Books">
-	<meta itemprop="image" content="icons/icon-192x192.png">
-	<!-- See https://goo.gl/OOhYW5 -->
-	<link rel="manifest" href="manifest.json">
-	<!-- See https://goo.gl/qRE0vM -->
-	<meta name="theme-color" content="#ffffff">
-	<!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="application-name" content="Books">
-	<!-- Add to homescreen for Safari on iOS -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="apple-mobile-web-app-title" content="Books">
-	<!-- Homescreen icons -->
-	<link rel="apple-touch-icon" href="icons/icon-48x48.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="icons/icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="96x96" href="icons/icon-96x96.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192x192.png">
-	<!-- Tile icon for Windows 8 (144x144 + tile color) -->
-	<meta name="msapplication-TileImage" content="icons/icon-144x144.png">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-tap-highlight" content="no">
-	<!-- OpenGraph -->
-	<meta property="og:site_name" content="Books">
-	<meta property="og:url" content="https://liyasthomas.github.io/books">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Books">
-	<meta property="og:description" content="Find books from NGTE">
-	<meta property="og:image" content="icons/icon-144x144.png">
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@liyasthomas">
-	<meta name="twitter:creator" content="@liyasthomas">
-	<meta name="twitter:url" content="https://liyasthomas.github.io/books">
-	<meta name="twitter:title" content="Books">
-	<meta name="twitter:description" content="Find books from NGTE">
-	<meta name="twitter:image" content="icons/icon-144x144.png">
-	<!-- Web Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,900&display=swap" rel="stylesheet">
-	<!-- Scripts -->
-	<link rel="stylesheet" href="index.css">
-	<script>
-		if ("serviceWorker" in navigator) {
-			window.addEventListener("load", function () {
-				navigator.serviceWorker.register("sw.js").then(function (registration) {
-					console.log("ServiceWorker registration successful with scope: ", registration.scope);
-				}).catch(function (err) {
-					console.log("ServiceWorker registration failed: ", err);
-				});
-			});
-		}
-	</script>
-	<style>
-		#_hj-f5b2a1eb-9b07_feedback_open {
-			height: 350px;
-			width: 400px;
-			background-color: white;
-		}
-	</style>
-</head>
-
-<body>
-	<aside>
-		<div class="logo">
-			<a href="https://liyasthomas.github.io/books">
-				NGTE
-				<br />
-				某熊的笔记
-			</a>
-		</div>
-		<nav>
-			<ul>
-				<li class="subhead">发现</li>
-				<li><a class="nav scrolltoview" href="/"><span class="icon">🏠</span>主页</a></li>
-				<li><a class="nav scrolltoview current" href="#search"><span class="icon">🔍</span>搜索</a></li>
-				<li><a class="nav scrolltoview" href="#foryou"><span class="icon">⚜️</span>上新</a></li>
-				<li class="subhead">分类</li>
-				<li><a class="nav scrolltoview" href="#resource"><span class="icon">⛳</span>知识体系、书籍、视频、开源项目</a></li>
-				<li><a class="nav scrolltoview" href="#pl"><span class="icon">📟</span>编程语言</a></li>
-				<li><a class="nav scrolltoview" href="#se"><span class="icon">🌈</span>数据结构、算法、软件架构</a></li>
-				<li><a class="nav scrolltoview" href="#fe"><span class="icon">🌺</span>Web、大前端、可视化</a></li>
-				<li><a class="nav scrolltoview" href="#be"><span class="icon">🐂</span>服务端、微服务、云原生</a></li>
-				<li><a class="nav scrolltoview" href="#infras"><span class="icon">🐽</span>分布式系统、数据库、虚拟化</a></li>
-				<li><a class="nav scrolltoview" href="#ai"><span class="icon">🦒</span>人工智能、机器学习、深度学习</a></li>
-				<li><a class="nav scrolltoview" href="#product"><span class="icon">🐹</span>产品、运营、创业</a></li>
-				<li class="subhead">致敬</li>
-				<li><a class="nav scrolltoview" href="https://github.com/liyasthomas/books"><span
-							class="icon">💕</span>liyasthomas</a></li>
-				<li class="nav"><span class="icon">✨</span><a href="https://github.com/topics/wx-doc">More</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="spacer"></div>
-		<footer id="footer" class="footer" style="display:flex;justify-content: space-between;">
-			<label class="theme-switch" for="checkbox" title="Night mode">
-				<div class="slider round"></div>
-				<input type="checkbox" id="checkbox" aria-label="Night mode">
-			</label>
-			<div class='prompt'>
-				<a class="pagination" href="https://github.com/wx-chevalier" target="_blank" rel="noopener"
-					aria-label="GitHub"><img src="icons/github.svg" alt="GitHub"></a>
-			</div>
-		</footer>
-
-
-	</aside>
-	<main id="main" class="main">
-		<article>
-			<section id="search" class="results">
-				<div class="flex">
-					<input id="search-box" class="search-box"
-						placeholder="Search books by name, author, genre and etc ..." aria-label="Search books">
-					<button id="installPWA" class="info" onclick="installPWA()"
-						style="margin-left: 24px; padding: 8px 16px;"><img src="icons/pwalogo.svg" alt="PWA"
-							style="height: 16px;"></button>
-				</div>
-				<div class="list-book search">
-					<div class="prompt">Enter a search term</div>
-				</div>
-			</section>
-			<div id="foryou">
-				<section class="results">
-					<div class="list-book foryou">
-						<a class="category" href="#pl">
-							<div class="book">
-								<div class="book-info">
-									<h1 class="section-title">Java & Spring</h1>
-								</div>
-							</div>
-						</a>
-						<a class="category" href="#fe">
-							<div class="book">
-								<div class="book-info">
-									<h1 class="section-title">Web</h1>
-								</div>
-							</div>
-						</a>
-						<a class="category" href="#be">
-							<div class="book">
-								<div class="book-info">
-									<h1 class="section-title">微服务</h1>
-								</div>
-							</div>
-						</a>
-						<a class="category" href="#infras">
-							<div class="book">
-								<div class="book-info">
-									<h1 class="section-title">Kubernetes</h1>
-								</div>
-							</div>
-						</a>
-					</div>
-				</section>
-			</div>
-			<footer id="footer" class="footer" style="margin-top:24px">
-
-			</footer>
-		</article>
-	</main>
-	<script src="index.js"></script>
-	<script>
-		(function (h, o, t, j, a, r) {
-			h.hj = h.hj || function () {
-				(h.hj.q = h.hj.q || []).push(arguments)
-			};
-			h._hjSettings = {
-				hjid: 1026253,
-				hjsv: 6
-			};
-			a = o.getElementsByTagName('head')[0];
-			r = o.createElement('script');
-			r.async = 1;
-			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-			a.appendChild(r);
-		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-	</script>
-</body>
-
+  <body>
+    <aside>
+      <div class="logo">
+        <a href="https://wx-chevalier.github.io/">
+          NGTE
+          <br />
+          某熊的笔记
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li class="subhead">发现</li>
+          <li>
+            <a class="nav scrolltoview" href="/"
+              ><span class="icon">🏠</span>主页</a
+            >
+          </li>
+          <li>
+            <a class="nav scrolltoview current" href="#search"
+              ><span class="icon">🔍</span>搜索</a
+            >
+          </li>
+          <li>
+            <a class="nav scrolltoview" href="#foryou"
+              ><span class="icon">⚜️</span>上新</a
+            >
+          </li>
+          <li class="subhead">分类</li>
+          <li>
+            <a class="nav scrolltoview" href="#resource"
+              ><span class="icon">⛳</span>知识体系、书籍、视频、开源项目</a
+            >
+          </li>
+          <li>
+            <a class="nav scrolltoview" href="#pl"
+              ><span class="icon">📟</span>编程语言</a
+            >
+          </li>
+          <li>
+            <a class="nav scrolltoview" href="#se"
+              ><span class="icon">🌈</span>数据结构、算法、软件架构</a
+            >
+          </li>
+          <li>
+            <a class="nav scrolltoview" href="#fe"
+              ><span class="icon">🌺</span>Web、大前端、可视化</a
+            >
+          </li>
+          <li>
+            <a class="nav scrolltoview" href="#be"
+              ><span class="icon">🐂</span>服务端、微服务、云原生</a
+            >
+          </li>
+          <li>
+            <a class="nav scrolltoview" href="#infras"
+              ><span class="icon">🐽</span>分布式系统、数据库、虚拟化</a
+            >
+          </li>
+          <li>
+            <a class="nav scrolltoview" href="#ai"
+              ><span class="icon">🦒</span>人工智能、机器学习、深度学习</a
+            >
+          </li>
+          <li>
+            <a class="nav scrolltoview" href="#product"
+              ><span class="icon">🐹</span>产品、运营、创业</a
+            >
+          </li>
+          <li class="subhead">致敬</li>
+          <li>
+            <a
+              class="nav scrolltoview"
+              href="https://github.com/wx-chevalier/books"
+              ><span class="icon">💕</span>wx-chevalier</a
+            >
+          </li>
+          <li class="nav">
+            <span class="icon">✨</span
+            ><a href="https://github.com/topics/wx-doc">More</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="spacer"></div>
+      <footer
+        id="footer"
+        class="footer"
+        style="display:flex;justify-content: space-between;"
+      >
+        <label class="theme-switch" for="checkbox" title="Night mode">
+          <div class="slider round"></div>
+          <input type="checkbox" id="checkbox" aria-label="Night mode" />
+        </label>
+        <div class="prompt">
+          <a
+            class="pagination"
+            href="https://github.com/wx-chevalier"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><img src="icons/github.svg" alt="GitHub"
+          /></a>
+        </div>
+      </footer>
+    </aside>
+    <main id="main" class="main">
+      <article>
+        <section id="search" class="results">
+          <div class="flex">
+            <input
+              id="search-box"
+              class="search-box"
+              placeholder="Search books by name, author, genre and etc ..."
+              aria-label="Search books"
+            />
+            <button
+              id="installPWA"
+              class="info"
+              onclick="installPWA()"
+              style="margin-left: 24px; padding: 8px 16px;"
+            >
+              <img src="icons/pwalogo.svg" alt="PWA" style="height: 16px;" />
+            </button>
+          </div>
+          <div class="list-book search">
+            <div class="prompt">Enter a search term</div>
+          </div>
+        </section>
+        <div id="foryou">
+          <section class="results">
+            <div class="list-book foryou">
+              <a class="category" href="#pl">
+                <div class="book">
+                  <div class="book-info">
+                    <h1 class="section-title">Java & Spring</h1>
+                  </div>
+                </div>
+              </a>
+              <a class="category" href="#fe">
+                <div class="book">
+                  <div class="book-info">
+                    <h1 class="section-title">Web</h1>
+                  </div>
+                </div>
+              </a>
+              <a class="category" href="#be">
+                <div class="book">
+                  <div class="book-info">
+                    <h1 class="section-title">微服务</h1>
+                  </div>
+                </div>
+              </a>
+              <a class="category" href="#infras">
+                <div class="book">
+                  <div class="book-info">
+                    <h1 class="section-title">Kubernetes</h1>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </section>
+        </div>
+        <footer id="footer" class="footer" style="margin-top:24px"></footer>
+      </article>
+    </main>
+    <script src="index.js"></script>
+    <script>
+      (function(h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function() {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = {
+          hjid: 1026253,
+          hjsv: 6
+        };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </body>
 </html>
