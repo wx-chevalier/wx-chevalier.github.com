@@ -55,13 +55,13 @@
 
         if (!useCallback) {
           //no callback, just wait for the response
-          return countStars(JSON.parse(xmlhttp.responseText));
+          return countStars(JSON.parse(xmlhttp.responseText)) || 0;
         }
       };
     })(typeof exports !== 'undefined' ? exports : window);
   </script>
   <script>
-    alert(githubStars('wx-chevalier') + githubStars('ng-tech-edu') + githubStars('Union-Fab') + githubStars(
+    alert(githubStars('wx-chevalier') + githubStars('ng-tech-edu') + githubStars('Unionfab') + githubStars(
       'Dev-Snippets') + githubStars('FE-Kits') + githubStars('BE-Kits') + githubStars('AI-Kits'));
     console.log('No Callback: ' + githubStars('wx-chevalier'));
     githubStars('wx-chevalier', function (stars) {
