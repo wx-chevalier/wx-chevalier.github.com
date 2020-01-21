@@ -185,7 +185,7 @@ const getBooks = async book => {
         {
           volumeInfo: {
             title: "编程范式与设计模式",
-            previewLink: "https://ng-tech.icu/SoftwareEngineering-Series/",
+            previewLink: "https://ng-tech.icu/DesignPattern-Series/",
             imageLinks: {
               thumbnail: getCover("Design Patterns")
             },
@@ -195,7 +195,7 @@ const getBooks = async book => {
         {
           volumeInfo: {
             title: "数据结构与算法",
-            previewLink: "https://ng-tech.icu/SoftwareEngineering-Series/",
+            previewLink: "https://ng-tech.icu/AlgoDS-Series/",
             imageLinks: {
               thumbnail: getCover("Algorithm & DataStructure")
             },
@@ -205,7 +205,7 @@ const getBooks = async book => {
         {
           volumeInfo: {
             title: "软件架构设计",
-            previewLink: "https://ng-tech.icu/SoftwareEngineering-Series/",
+            previewLink: "https://ng-tech.icu/SoftwareArchitecture-Series/",
             imageLinks: {
               thumbnail: getCover("Software Architecture")
             },
