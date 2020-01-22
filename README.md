@@ -6,4 +6,5 @@
 
 ## Motivation & Credits
 
-- https://github.com/PavelDoGreat/WebGL-Fluid-Simulation
+- https://codepen.io/designcouch/pen/obvKxm
+- https://codepen.io/ego/pen/abzPNEL
