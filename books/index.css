@@ -322,7 +322,7 @@ article {
 .category {
 	display: flex;
 	margin: 16px;
-	height: 15vh;
+	height: 18vh;
 	border-radius: 16px;
 	background-position: center center;
 	background-size: cover;
@@ -331,6 +331,7 @@ article {
 	transition: all .2s;
 	align-items: center;
 	flex: 1;
+	font-size: 16px;
 }
 
 .category:hover {
@@ -395,6 +396,10 @@ article {
 	display: inline-flex;
 	flex-direction: column;
 	align-items: flex-start;
+}
+
+.book-info .section-title {
+	font-size: 24px;
 }
 
 .thumbnail {
