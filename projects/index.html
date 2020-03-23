@@ -6,57 +6,57 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no" />
   <title>Just Coder</title>
-  <meta name="description" content="NGTE Books" />
-  <link rel="icon" href="favicon.ico" />
-  <meta itemprop="name" content="Books" />
-  <meta itemprop="description" content="NGTE Books" />
-  <meta itemprop="image" content="icons/icon-192x192.png" />
+  <meta name="description" content="NGTE Projects" />
+  <link rel="icon" href="./assets/favicon.ico" />
+  <meta itemprop="name" content="Projects" />
+  <meta itemprop="description" content="NGTE Projects" />
+  <meta itemprop="image" content="./assets/icons/icon-192x192.png" />
   <meta name="gc:theme" content="medium">
   <!-- See https://goo.gl/OOhYW5 -->
-  <link rel="manifest" href="manifest.json" />
+  <link rel="manifest" href="./assets/manifest.json" />
   <!-- See https://goo.gl/qRE0vM -->
   <meta name="theme-color" content="#ffffff" />
   <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
   <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="application-name" content="Books" />
+  <meta name="application-name" content="Projects" />
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Books" />
+  <meta name="apple-mobile-web-app-title" content="Projects" />
   <!-- Homescreen icons -->
-  <link rel="apple-touch-icon" href="icons/icon-48x48.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="icons/icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="96x96" href="icons/icon-96x96.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" href="./assets/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="./assets/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="./assets/icons/icon-192x192.png" />
   <!-- Tile icon for Windows 8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="icons/icon-144x144.png" />
+  <meta name="msapplication-TileImage" content="./assets/icons/icon-144x144.png" />
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-tap-highlight" content="no" />
   <!-- OpenGraph -->
-  <meta property="og:site_name" content="Books" />
-  <meta property="og:url" content="https://wx-chevalier.github.io/books" />
+  <meta property="og:site_name" content="Projects" />
+  <meta property="og:url" content="https://wx-chevalier.github.io/projects" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Books" />
-  <meta property="og:description" content="Find books from NGTE" />
-  <meta property="og:image" content="icons/icon-144x144.png" />
+  <meta property="og:title" content="Projects" />
+  <meta property="og:description" content="Find projects from NGTE" />
+  <meta property="og:image" content="./assets/icons/icon-144x144.png" />
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@wx-chevalier" />
   <meta name="twitter:creator" content="@wx-chevalier" />
-  <meta name="twitter:url" content="https://wx-chevalier.github.io/books" />
-  <meta name="twitter:title" content="Books" />
-  <meta name="twitter:description" content="Find books from NGTE" />
-  <meta name="twitter:image" content="icons/icon-144x144.png" />
+  <meta name="twitter:url" content="https://wx-chevalier.github.io/projects" />
+  <meta name="twitter:title" content="Projects" />
+  <meta name="twitter:description" content="Find projects from NGTE" />
+  <meta name="twitter:image" content="./assets/icons/icon-144x144.png" />
   <!-- Web Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,900&display=swap" rel="stylesheet" />
   <!-- Scripts -->
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="./assets/index.css" />
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
         navigator.serviceWorker
-          .register("sw.js")
+          .register("./assets/sw.js")
           .then(function (registration) {
             console.log(
               "ServiceWorker registration successful with scope: ",
@@ -114,7 +114,7 @@
         </li>
         <li class="subhead">致敬</li>
         <li>
-          <a class="nav scrolltoview" href="https://github.com/wx-chevalier/books"><span
+          <a class="nav scrolltoview" href="https://github.com/wx-chevalier/projects"><span
               class="icon">💕</span>wx-chevalier</a>
         </li>
         <li class="nav">
@@ -138,8 +138,8 @@
     <article>
       <section id="search" class="results">
         <div class="flex">
-          <input id="search-box" class="search-box" placeholder="Search books by name, author, genre and etc ..."
-            aria-label="Search books" />
+          <input id="search-box" class="search-box" placeholder="Search projects by name, author, genre and etc ..."
+            aria-label="Search projects" />
           <button id="installPWA" class="info" onclick="installPWA()" style="margin-left: 24px; padding: 8px 16px;">
             <img src="icons/pwalogo.svg" alt="PWA" style="height: 16px;" />
           </button>
@@ -186,8 +186,8 @@
       <footer id="footer" class="footer" style="margin-top:24px"></footer>
     </article>
   </main>
-  <script src="widget.js"></script>
-  <script src="index.js"></script>
+  <script src="./assets/widget.js"></script>
+  <script src="./assets/index.js"></script>
   <script>
     (function (h, o, t, j, a, r) {
       h.hj =
