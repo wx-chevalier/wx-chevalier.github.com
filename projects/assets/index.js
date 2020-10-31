@@ -6,7 +6,7 @@ let searchBooks = document.getElementById("search-box");
   { id: "dev-snippets", title: "Dev Snippets | 代码片段", icon: "" },
   { id: "fe-kits", title: "FE Kits | 大前端与 Web", icon: "" },
   { id: "be-kits", title: "BE Kits | 服务端架构", icon: "" },
-  { id: "ai-kits", title: "AI Kits | 智能算法", icon: "" }
+  { id: "ai-kits", title: "AI Kits | 智能算法", icon: "" },
 ].forEach(({ id, title, icon }) => {
   document.addEventListener("DOMContentLoaded", () => {
     drawChartBook(id);
@@ -42,88 +42,88 @@ function randomIntFromInterval(min, max) {
 }
 
 /** 执行书籍抓取 */
-const getProjects = async book => {
+const getProjects = async (book) => {
   let data = [];
 
   switch (book) {
     case "dev-snippets": {
       data = [
         // Dev Snippets
-        { user: "Dev-Snippets", repo: "algorithm-snippets" },
-        { user: "Dev-Snippets", repo: "js-snippets" },
-        { user: "Dev-Snippets", repo: "design-pattern-snippets" },
-        { user: "Dev-Snippets", repo: "java-snippets" },
-        { user: "Dev-Snippets", repo: "go-snippets" },
-        { user: "Dev-Snippets", repo: "shell-scripts" },
-        { user: "Dev-Snippets", repo: "schema-hub-ts" },
-        { user: "Dev-Snippets", repo: "python-snippets" },
-        { user: "Dev-Snippets", repo: "data-vis-snippets" },
-        { user: "Dev-Snippets", repo: "coding-snippets" },
-        { user: "Dev-Snippets", repo: "plt-snippets" },
-        { user: "Dev-Snippets", repo: "vscode-snippets" },
-        { user: "Dev-Snippets", repo: "vscode-google-java-format-provider" }
+        { user: "wx-chevalier", repo: "algorithm-snippets" },
+        { user: "wx-chevalier", repo: "js-snippets" },
+        { user: "wx-chevalier", repo: "design-pattern-snippets" },
+        { user: "wx-chevalier", repo: "java-snippets" },
+        { user: "wx-chevalier", repo: "go-snippets" },
+        { user: "wx-chevalier", repo: "shell-scripts" },
+        { user: "wx-chevalier", repo: "schema-hub-ts" },
+        { user: "wx-chevalier", repo: "python-snippets" },
+        { user: "wx-chevalier", repo: "data-vis-snippets" },
+        { user: "wx-chevalier", repo: "coding-snippets" },
+        { user: "wx-chevalier", repo: "plt-snippets" },
+        { user: "wx-chevalier", repo: "vscode-snippets" },
+        { user: "wx-chevalier", repo: "vscode-google-java-format-provider" },
       ];
       break;
     }
     case "fe-kits": {
       data = [
         // FE Kits
-        { user: "FE-Kits", repo: "fe-boilerplates" },
-        { user: "FE-Kits", repo: "legoble" },
-        { user: "FE-Kits", repo: "fractal-components" },
-        { user: "FE-Kits", repo: "m-fe-taro" },
-        { user: "FE-Kits", repo: "m-fe-configs" },
-        { user: "FE-Kits", repo: "m-fe-vtw" },
-        { user: "FE-Kits", repo: "m-fe-scaffold" },
-        { user: "FE-Kits", repo: "m-fe-rtw" },
-        { user: "FE-Kits", repo: "m-fe-libs" },
-        { user: "FE-Kits", repo: "m-fe-ssr" },
-        { user: "FE-Kits", repo: "m-fe-rm" },
-        { user: "FE-Kits", repo: "ueact" },
-        { user: "FE-Kits", repo: "ueme" },
-        { user: "FE-Kits", repo: "ueme-replay" },
-        { user: "FE-Kits", repo: "web-whiteboard" },
-        { user: "FE-Kits", repo: "uvc-live" },
-        { user: "FE-Kits", repo: "react-examples" },
-        { user: "FE-Kits", repo: "web-examples" },
-        { user: "FE-Kits", repo: "vue-examples" },
-        { user: "FE-Kits", repo: "node-examples" },
-        { user: "FE-Kits", repo: "nest-realworld-app" },
-        { user: "FE-Kits", repo: "redux-middlewares" },
-        { user: "FE-Kits", repo: "stl-tools" },
-        { user: "FE-Kits", repo: "xiddler" },
-        { user: "FE-Kits", repo: "AJER" },
-        { user: "FE-Kits", repo: "iotable" }
+        { user: "wx-chevalier", repo: "fe-boilerplates" },
+        { user: "wx-chevalier", repo: "legoble" },
+        { user: "wx-chevalier", repo: "fractal-components" },
+        { user: "wx-chevalier", repo: "m-fe-taro" },
+        { user: "wx-chevalier", repo: "m-fe-configs" },
+        { user: "wx-chevalier", repo: "m-fe-vtw" },
+        { user: "wx-chevalier", repo: "m-fe-scaffold" },
+        { user: "wx-chevalier", repo: "m-fe-rtw" },
+        { user: "wx-chevalier", repo: "m-fe-libs" },
+        { user: "wx-chevalier", repo: "m-fe-ssr" },
+        { user: "wx-chevalier", repo: "m-fe-rm" },
+        { user: "wx-chevalier", repo: "ueact" },
+        { user: "wx-chevalier", repo: "ueme" },
+        { user: "wx-chevalier", repo: "ueme-replay" },
+        { user: "wx-chevalier", repo: "web-whiteboard" },
+        { user: "wx-chevalier", repo: "uvc-live" },
+        { user: "wx-chevalier", repo: "react-examples" },
+        { user: "wx-chevalier", repo: "web-examples" },
+        { user: "wx-chevalier", repo: "vue-examples" },
+        { user: "wx-chevalier", repo: "node-examples" },
+        { user: "wx-chevalier", repo: "nest-realworld-app" },
+        { user: "wx-chevalier", repo: "redux-middlewares" },
+        { user: "wx-chevalier", repo: "stl-tools" },
+        { user: "wx-chevalier", repo: "xiddler" },
+        { user: "wx-chevalier", repo: "AJER" },
+        { user: "wx-chevalier", repo: "iotable" },
       ];
       break;
     }
     case "be-kits": {
       data = [
-        { user: "BE-Kits", repo: "horus-monitor" },
-        { user: "BE-Kits", repo: "k8s-examples" },
-        { user: "BE-Kits", repo: "sql-examples" },
-        { user: "BE-Kits", repo: "ioredisson" },
-        { user: "BE-Kits", repo: "Reinvent-Cloud-Native-Mall" },
-        { user: "BE-Kits", repo: "spring-examples" },
-        { user: "BE-Kits", repo: "grpc-examples" },
-        { user: "BE-Kits", repo: "devops-scripts" },
-        { user: "BE-Kits", repo: "Reinvent-DB" },
-        { user: "BE-Kits", repo: "UDLA" },
-        { user: "BE-Kits", repo: "Backend-Boilerplates" },
-        { user: "BE-Kits", repo: "mushi-chat" },
-        { user: "BE-Kits", repo: "xe-crawler" },
-        { user: "BE-Kits", repo: "Data-Fabric" },
-        { user: "BE-Kits", repo: "MEMI-Schema" },
-        { user: "BE-Kits", repo: "Cendertron" },
-        { user: "BE-Kits", repo: "Chaos-Scanner" },
-        { user: "BE-Kits", repo: "go-utils" },
-        { user: "BE-Kits", repo: "Reinvent-SSO" },
-        { user: "BE-Kits", repo: "Reinvent-RPC" },
-        { user: "BE-Kits", repo: "Reinvent-MQ" },
-        { user: "BE-Kits", repo: "SparkChain" },
-        { user: "BE-Kits", repo: "MEMI-I18n" },
-        { user: "BE-Kits", repo: "Focker" },
-        { user: "BE-Kits", repo: "winter-boot" }
+        { user: "wx-chevalier", repo: "horus-monitor" },
+        { user: "wx-chevalier", repo: "k8s-examples" },
+        { user: "wx-chevalier", repo: "sql-examples" },
+        { user: "wx-chevalier", repo: "ioredisson" },
+        { user: "wx-chevalier", repo: "Reinvent-Cloud-Native-Mall" },
+        { user: "wx-chevalier", repo: "spring-examples" },
+        { user: "wx-chevalier", repo: "grpc-examples" },
+        { user: "wx-chevalier", repo: "devops-scripts" },
+        { user: "wx-chevalier", repo: "Reinvent-DB" },
+        { user: "wx-chevalier", repo: "UDLA" },
+        { user: "wx-chevalier", repo: "Backend-Boilerplates" },
+        { user: "wx-chevalier", repo: "mushi-chat" },
+        { user: "wx-chevalier", repo: "xe-crawler" },
+        { user: "wx-chevalier", repo: "Data-Fabric" },
+        { user: "wx-chevalier", repo: "MEMI-Schema" },
+        { user: "wx-chevalier", repo: "Cendertron" },
+        { user: "wx-chevalier", repo: "Chaos-Scanner" },
+        { user: "wx-chevalier", repo: "go-utils" },
+        { user: "wx-chevalier", repo: "Reinvent-SSO" },
+        { user: "wx-chevalier", repo: "Reinvent-RPC" },
+        { user: "wx-chevalier", repo: "Reinvent-MQ" },
+        { user: "wx-chevalier", repo: "SparkChain" },
+        { user: "wx-chevalier", repo: "MEMI-I18n" },
+        { user: "wx-chevalier", repo: "Focker" },
+        { user: "wx-chevalier", repo: "winter-boot" },
       ];
       break;
     }
@@ -196,7 +196,7 @@ const drawListBook = async () => {
 };
 const updateFilter = ({ innerHTML }, f) => {
   document.getElementById("main").scrollIntoView({
-    behavior: "smooth"
+    behavior: "smooth",
   });
   let m;
   switch (f) {
@@ -216,7 +216,7 @@ const debounce = (fn, time, to = 0) => {
 searchBooks.addEventListener("input", () => debounce(drawListBook, 1000));
 
 let mainNavLinks = document.querySelectorAll(".scrolltoview");
-window.addEventListener("scroll", event => {
+window.addEventListener("scroll", (event) => {
   let fromTop = window.scrollY + 64;
   mainNavLinks.forEach(({ hash, classList }) => {
     if (!hash) {
@@ -272,7 +272,7 @@ const switchTheme = ({ target }) => {
 };
 toggleSwitch.addEventListener("change", switchTheme, false);
 let startIndex = 0;
-const next = subject => {
+const next = (subject) => {
   startIndex += 6;
   if (startIndex >= 0) {
     document.getElementById(`${subject}-prev`).style.display = "inline-flex";
@@ -281,7 +281,7 @@ const next = subject => {
     document.getElementById(`${subject}-prev`).style.display = "none";
   }
 };
-const prev = subject => {
+const prev = (subject) => {
   startIndex -= 6;
   if (startIndex <= 0) {
     startIndex = 0;
@@ -308,7 +308,7 @@ if (pwaInstalled) {
   document.getElementById("installPWA").style.display = "inline-flex";
 }
 let deferredPrompt = null;
-window.addEventListener("beforeinstallprompt", e => {
+window.addEventListener("beforeinstallprompt", (e) => {
   deferredPrompt = e;
 });
 async function installPWA() {
@@ -324,7 +324,7 @@ async function installPWA() {
     });
   }
 }
-window.addEventListener("appinstalled", evt => {
+window.addEventListener("appinstalled", (evt) => {
   localStorage.setItem("pwaInstalled", "yes");
   pwaInstalled = true;
   document.getElementById("installPWA").style.display = "none";
