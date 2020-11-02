@@ -263,6 +263,15 @@
     </div>
   </div>
 </body>
+<script>
+  // Check that service workers are supported
+  if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+  </script>
 <script src="https://unpkg.com/popper.js@1"></script>
 <script src="https://unpkg.com/tippy.js@4"></script>
 <script>
@@ -312,6 +321,7 @@
     a.appendChild(r);
   })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
 </script>
+
 <script type="text/javascript" src="./dat.gui.min.js"></script>
 <script src="./three.min.js"></script>
 <script src="./postprocessing.min.js"></script>
