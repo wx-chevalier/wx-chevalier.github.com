@@ -197,11 +197,14 @@
     .discord:before {
       content: "d";
     }
+
+    a[title="站长统计"]{
+      display: none;
+    }
   </style>
 </head>
 
 <body>
-  <canvas></canvas>
   <div class="container" style="text-align:center">
     <div class="name" onclick="window.location.href='https://github.com/wx-chevalier'" id="name">
       <div>
@@ -310,7 +313,10 @@
   })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
 </script>
 <script type="text/javascript" src="./dat.gui.min.js"></script>
-<script src="./script.js"></script>
+<script src="./three.min.js"></script>
+<script src="./postprocessing.min.js"></script>
+<script src="./three-bg.js"></script>
+
 <script src="./github-count.js"></script>
 <script>
   let demo = new CountUp(
@@ -332,5 +338,6 @@
     console.error(demo.error);
   }
 </script>
+<script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1279148160&web_id=1279148160"></script>
 
 </html>
