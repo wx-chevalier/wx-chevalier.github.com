@@ -4,13 +4,21 @@ let searchBooks = document.getElementById("search-box");
 /** @start 添加元素 */
 [
   { id: "resource", title: "参考资料、书籍、视频、开源项目", icon: "" },
-  { id: "pl", title: "编程语言", icon: "" },
+  {
+    id: "pl",
+    title: "编程语言（JavaScript、Java、Go、Python、Rust）",
+    icon: "",
+  },
   { id: "se", title: "数据结构、算法、软件架构", icon: "" },
-  { id: "fe", title: "Web、大前端、可视化", icon: "" },
-  { id: "be", title: "服务端、微服务、云原生", icon: "" },
-  { id: "infras", title: "分布式系统、数据库、虚拟化", icon: "" },
+  { id: "fe", title: "大前端、Web、视觉与可视化", icon: "" },
+  { id: "be", title: "服务端、微服务、DevOps、高可用、Spring", icon: "" },
+  {
+    id: "infras",
+    title: "分布式系统（计算/存储）、Linux、数据库、云与虚拟化",
+    icon: "",
+  },
   { id: "ai", title: "人工智能、机器学习、深度学习", icon: "" },
-  { id: "product", title: "产品、运营、创业", icon: "" }
+  { id: "product", title: "产品、运营、创业", icon: "" },
 ].forEach(({ id, title, icon }) => {
   document.addEventListener("DOMContentLoaded", () => {
     drawChartBook(id);
@@ -45,7 +53,7 @@ function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const getCover = title => {
+const getCover = (title) => {
   return `https://orly-appstore.herokuapp.com/generate?title=${title}&top_text=Just%20Coder&author=wx-chevalier&image_code=${randomIntFromInterval(
     1,
     40
@@ -56,7 +64,7 @@ const getCover = title => {
 };
 
 /** 执行书籍抓取 */
-const getBooks = async book => {
+const getBooks = async (book) => {
   let data = [];
 
   switch (book) {
@@ -67,61 +75,62 @@ const getBooks = async book => {
             title: "CS 资料集锦",
             previewLink: "https://ng-tech.icu/Awesome-Lists",
             imageLinks: {
-              thumbnail: "https://s2.ax1x.com/2020/01/18/19npPP.png"
+              thumbnail: "https://s2.ax1x.com/2020/01/18/19npPP.png",
             },
-            categories: ["Awesome Lists"]
-          }
+            categories: ["Awesome Lists"],
+          },
         },
         {
           volumeInfo: {
             title: "速学速查手册",
             previewLink: "https://ng-tech.icu/Awesome-CheatSheets",
             imageLinks: {
-              thumbnail: "https://s2.ax1x.com/2020/01/18/19nPxS.png"
+              thumbnail: "https://s2.ax1x.com/2020/01/18/19nPxS.png",
             },
-            categories: ["Awesome CheatSheets"]
-          }
+            categories: ["Awesome CheatSheets"],
+          },
         },
         {
           volumeInfo: {
             title: "求职面试必备",
             previewLink: "https://ng-tech.icu/Awesome-Interviews",
             imageLinks: {
-              thumbnail: "https://s2.ax1x.com/2020/01/18/19ne5q.png"
+              thumbnail: "https://s2.ax1x.com/2020/01/18/19ne5q.png",
             },
-            categories: ["Awesome Interviews"]
-          }
+            categories: ["Awesome Interviews"],
+          },
         },
         {
           volumeInfo: {
             title: "程序员进阶指南",
-            previewLink: "https://ng-tech.icu/Awesome-RoadMaps",
+            previewLink: "https://ng-tech.icu/Awesome-Vision-and-RoadMaps",
             imageLinks: {
-              thumbnail: "https://s2.ax1x.com/2020/01/18/19n1r4.png"
+              thumbnail: "https://s2.ax1x.com/2020/01/18/19n1r4.png",
             },
-            categories: ["Awesome RoadMaps"]
-          }
+            categories: ["Vision", "RoadMaps"],
+          },
         },
         {
           volumeInfo: {
             title: "知识脉络思维脑图",
             previewLink: "https://ng-tech.icu/Awesome-MindMaps",
             imageLinks: {
-              thumbnail: "https://s2.ax1x.com/2020/01/18/19naRK.png"
+              thumbnail: "https://s2.ax1x.com/2020/01/18/19naRK.png",
             },
-            categories: ["Awesome MindMaps"]
-          }
+            categories: ["Awesome MindMaps"],
+          },
         },
         {
           volumeInfo: {
             title: "开源书籍（.pdf）汇总",
-            previewLink: "https://github.com/wx-chevalier/Awesome-CS-Books",
+            previewLink:
+              "https://github.com/wx-chevalier/Awesome-CS-Books-and-Digests",
             imageLinks: {
-              thumbnail: "https://s2.ax1x.com/2020/01/18/19nBse.png"
+              thumbnail: "https://s2.ax1x.com/2020/01/18/19nBse.png",
             },
-            categories: ["Awesome CS-Books"]
-          }
-        }
+            categories: ["Awesome CS-Books and Digests"],
+          },
+        },
       ];
       break;
     }
@@ -132,51 +141,51 @@ const getBooks = async book => {
             title: "Java 实战",
             previewLink: "https://ng-tech.icu/Java-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Java Series")
+              thumbnail: getCover("Java Series"),
             },
-            categories: ["Java", "Spring"]
-          }
+            categories: ["Java", "Spring"],
+          },
         },
         {
           volumeInfo: {
             title: "JavaScript 实战",
             previewLink: "https://ng-tech.icu/JavaScript-Series/#/",
             imageLinks: {
-              thumbnail: getCover("JavaScript Series")
+              thumbnail: getCover("JavaScript Series"),
             },
-            categories: ["JavaScript"]
-          }
+            categories: ["JavaScript"],
+          },
         },
         {
           volumeInfo: {
             title: "Python 实战",
             previewLink: "https://ng-tech.icu/ProgrammingLanguage-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Python Series")
+              thumbnail: getCover("Python Series"),
             },
-            categories: ["Python"]
-          }
+            categories: ["Python"],
+          },
         },
         {
           volumeInfo: {
             title: "Go 实战",
             previewLink: "https://ng-tech.icu/Go-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Go Series")
+              thumbnail: getCover("Go Series"),
             },
-            categories: ["Go"]
-          }
+            categories: ["Go"],
+          },
         },
         {
           volumeInfo: {
             title: "Rust 实战",
             previewLink: "https://ng-tech.icu/ProgrammingLanguage-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Rust Series")
+              thumbnail: getCover("Rust Series"),
             },
-            categories: ["Rust"]
-          }
-        }
+            categories: ["Rust"],
+          },
+        },
       ];
       break;
     }
@@ -187,41 +196,41 @@ const getBooks = async book => {
             title: "编程范式与设计模式",
             previewLink: "https://ng-tech.icu/DesignPattern-Series/",
             imageLinks: {
-              thumbnail: getCover("Design Patterns")
+              thumbnail: getCover("Design Patterns"),
             },
-            categories: ["Design Patterns"]
-          }
+            categories: ["Design Patterns"],
+          },
         },
         {
           volumeInfo: {
             title: "数据结构与算法",
-            previewLink: "https://ng-tech.icu/AlgoDS-Series/",
+            previewLink: "https://ng-tech.icu/Algorithm-Series/",
             imageLinks: {
-              thumbnail: getCover("Algorithm & DataStructure")
+              thumbnail: getCover("Algorithm & DataStructure"),
             },
-            categories: ["Data Structure", "Algorithm"]
-          }
+            categories: ["数据结构", "算法"],
+          },
         },
         {
           volumeInfo: {
             title: "软件架构设计",
             previewLink: "https://ng-tech.icu/SoftwareArchitecture-Series/",
             imageLinks: {
-              thumbnail: getCover("Software Architecture")
+              thumbnail: getCover("Software Architecture"),
             },
-            categories: ["Software Architecture"]
-          }
+            categories: ["风格与模式", "复杂性与设计原则", "架构设计方式"],
+          },
         },
         {
           volumeInfo: {
-            title: "整洁与重构",
+            title: "软件工程：整洁与重构",
             previewLink: "https://ng-tech.icu/SoftwareEngineering-Series/",
             imageLinks: {
-              thumbnail: getCover("Refactor")
+              thumbnail: getCover("Refactor"),
             },
-            categories: ["Refactor"]
-          }
-        }
+            categories: ["Software Engineering", "Refactor"],
+          },
+        },
       ];
       break;
     }
@@ -229,64 +238,54 @@ const getBooks = async book => {
       data = [
         {
           volumeInfo: {
-            title: "现代 Web 全栈开发与工程架构",
-            previewLink: "https://ng-tech.icu/Web-Series/",
+            title: "大前端",
+            previewLink: "https://ng-tech.icu/Frontend-Series/",
             imageLinks: {
-              thumbnail: getCover("Web Series")
+              thumbnail: getCover("Data Visualization"),
             },
-            categories: ["Web", "React", "Vue"]
-          }
+            categories: ["虚拟现实", "移动应用", "游戏"],
+          },
         },
         {
           volumeInfo: {
-            title: "数据可视化",
-            previewLink: "https://ng-tech.icu/Frontend-Series/",
+            title: "现代 Web 全栈开发与工程架构",
+            previewLink: "https://ng-tech.icu/Web-Series/",
             imageLinks: {
-              thumbnail: getCover("Data Visualization")
+              thumbnail: getCover("Web Series"),
             },
-            categories: ["DataVis"]
-          }
+            categories: ["Web", "React", "Vue"],
+          },
+        },
+        {
+          volumeInfo: {
+            title: "React",
+            previewLink: "https://ng-tech.icu/React-Series/",
+            imageLinks: {
+              thumbnail: getCover("React"),
+            },
+            categories: ["React"],
+          },
         },
         {
           volumeInfo: {
             title: "Node.js 全栈开发",
             previewLink: "https://ng-tech.icu/Node-Series/",
             imageLinks: {
-              thumbnail: getCover("Node Series")
+              thumbnail: getCover("Node Series"),
             },
-            categories: ["Node"]
-          }
+            categories: ["Node"],
+          },
         },
         {
           volumeInfo: {
-            title: "iOS",
-            previewLink: "https://ng-tech.icu/Frontend-Series/",
+            title: "视觉与可视化",
+            previewLink: "https://ng-tech.icu/CGDataVis-Series/",
             imageLinks: {
-              thumbnail: getCover("iOS")
+              thumbnail: getCover("视觉与可视化"),
             },
-            categories: ["iOS"]
-          }
+            categories: ["计算机图形学", "数据可视化"],
+          },
         },
-        {
-          volumeInfo: {
-            title: "Android",
-            previewLink: "https://ng-tech.icu/Frontend-Series/",
-            imageLinks: {
-              thumbnail: getCover("Android")
-            },
-            categories: ["Android"]
-          }
-        },
-        {
-          volumeInfo: {
-            title: "混合开发与跨端应用",
-            previewLink: "https://ng-tech.icu/Frontend-Series/",
-            imageLinks: {
-              thumbnail: getCover("Hybrid")
-            },
-            categories: ["Hybrid"]
-          }
-        }
       ];
       break;
     }
@@ -297,61 +296,61 @@ const getBooks = async book => {
             title: "服务端功能域",
             previewLink: "https://ng-tech.icu/Backend-Series/",
             imageLinks: {
-              thumbnail: getCover("Backend Series")
+              thumbnail: getCover("Backend Series"),
             },
-            categories: ["Backend"]
-          }
+            categories: ["Backend"],
+          },
         },
         {
           volumeInfo: {
             title: "微服务与云原生",
             previewLink: "https://ng-tech.icu/MicroService-Series/",
             imageLinks: {
-              thumbnail: getCover("MicroService Series")
+              thumbnail: getCover("MicroService Series"),
             },
-            categories: ["Backend", "MicroService"]
-          }
+            categories: ["RPC", "接入网关", "配置中心", "权限隔离"],
+          },
         },
         {
           volumeInfo: {
             title: "Spring 实战",
             previewLink: "https://ng-tech.icu/Spring-Series/",
             imageLinks: {
-              thumbnail: getCover("Spring Series")
+              thumbnail: getCover("Spring Series"),
             },
-            categories: ["Backend", "Spring"]
-          }
+            categories: ["Spring", "Spring Boot"],
+          },
         },
         {
           volumeInfo: {
             title: "测试与高可用保障",
-            previewLink: "https://ng-tech.icu/Backend-Series/",
+            previewLink: "https://ng-tech.icu/HA-Series/",
             imageLinks: {
-              thumbnail: getCover("Test Series")
+              thumbnail: getCover("测试与高可用保障"),
             },
-            categories: ["Backend", "Test"]
-          }
+            categories: ["Backend", "Test"],
+          },
         },
         {
           volumeInfo: {
             title: "DevOps 实战",
-            previewLink: "https://ng-tech.icu/Backend-Series/",
+            previewLink: "https://ng-tech.icu/DevOps-Series/",
             imageLinks: {
-              thumbnail: getCover("DevOps Series")
+              thumbnail: getCover("DevOps Series"),
             },
-            categories: ["Backend", "DevOps"]
-          }
+            categories: ["Backend", "DevOps"],
+          },
         },
         {
           volumeInfo: {
             title: "信息安全与渗透测试",
-            previewLink: "https://ng-tech.icu/Backend-Series/",
+            previewLink: "https://ng-tech.icu/InfoSecurity-Series/",
             imageLinks: {
-              thumbnail: getCover("InfoSecurity Series")
+              thumbnail: getCover("InfoSecurity Series"),
             },
-            categories: ["Backend", "InfoSecurity"]
-          }
-        }
+            categories: ["Backend", "InfoSecurity"],
+          },
+        },
       ];
       break;
     }
@@ -362,61 +361,96 @@ const getBooks = async book => {
             title: "分布式系统",
             previewLink: "https://ng-tech.icu/DistributedSystem-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Distributed System Series")
+              thumbnail: getCover("Distributed System Series"),
             },
-            categories: ["Backend", "Distributed System"]
-          }
+            categories: [
+              "分布式基础",
+              "分布式存储",
+              "分布式事务",
+              "一致性与共识",
+            ],
+          },
         },
         {
           volumeInfo: {
             title: "分布式计算",
-            previewLink: "https://ng-tech.icu/DistributedSystem-Series/#/",
+            previewLink: "https://ng-tech.icu/DistributedCompute-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Distributed Computing Series")
+              thumbnail: getCover("Distributed Compute Series"),
             },
-            categories: ["Backend", "Distributed Computing"]
-          }
+            categories: ["流处理", "批处理", "数据仓库", "消息系统"],
+          },
         },
         {
           volumeInfo: {
             title: "数据库",
             previewLink: "https://ng-tech.icu/Database-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Database Series")
+              thumbnail: getCover("Database Series"),
             },
-            categories: ["Backend", "Database"]
-          }
+            categories: ["Backend", "Database"],
+          },
         },
         {
           volumeInfo: {
             title: "网络",
             previewLink: "https://ng-tech.icu/Network-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Network Series")
+              thumbnail: getCover("Network Series"),
             },
-            categories: ["Backend", "Network"]
-          }
+            categories: ["Backend", "Network"],
+          },
         },
         {
           volumeInfo: {
             title: "虚拟化与云计算",
             previewLink: "https://ng-tech.icu/Cloud-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Cloud Series")
+              thumbnail: getCover("Cloud Series"),
             },
-            categories: ["Backend", "Cloud"]
-          }
+            categories: ["Backend", "Cloud"],
+          },
         },
         {
           volumeInfo: {
             title: "Linux 与操作系统",
             previewLink: "https://ng-tech.icu/Linux-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Linux Series")
+              thumbnail: getCover("Linux Series"),
             },
-            categories: ["Backend", "Linux"]
-          }
-        }
+            categories: ["Backend", "Linux"],
+          },
+        },
+        {
+          volumeInfo: {
+            title: "并发编程实战",
+            previewLink: "https://ng-tech.icu/Concurrent-Series/#/",
+            imageLinks: {
+              thumbnail: getCover("Concurrent Series"),
+            },
+            categories: ["Backend", "Concurrent"],
+          },
+        },
+        {
+          volumeInfo: {
+            title: "深入浅出 K8s",
+            previewLink: "https://ng-tech.icu/K8s-Series/#/",
+            imageLinks: {
+              thumbnail: getCover("K8s Series"),
+            },
+            categories: ["Backend", "Concurrent"],
+          },
+        },
+        {
+          volumeInfo: {
+            title: "MySQL 实战",
+            previewLink: "https://ng-tech.icu/MySQL-Series/#/",
+            imageLinks: {
+              thumbnail: getCover("MySQL Series"),
+            },
+            categories: ["Backend", "MySQL"],
+          },
+        },
       ];
       break;
     }
@@ -427,51 +461,51 @@ const getBooks = async book => {
             title: "数理统计",
             previewLink: "https://ng-tech.icu/Mathematics-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Mathematics Series")
+              thumbnail: getCover("Mathematics Series"),
             },
-            categories: ["AI", "Mathematics"]
-          }
+            categories: ["AI", "Mathematics"],
+          },
         },
         {
           volumeInfo: {
             title: "数据分析",
             previewLink: "https://ng-tech.icu/AI-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Data Series")
+              thumbnail: getCover("Data Series"),
             },
-            categories: ["AI", "Data"]
-          }
+            categories: ["AI", "Data"],
+          },
         },
         {
           volumeInfo: {
             title: "机器学习",
             previewLink: "https://ng-tech.icu/AI-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Machine Learning Series")
+              thumbnail: getCover("Machine Learning Series"),
             },
-            categories: ["AI", "Machine Learning"]
-          }
+            categories: ["AI", "Machine Learning"],
+          },
         },
         {
           volumeInfo: {
             title: "深度学习",
             previewLink: "https://ng-tech.icu/AI-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Deep Learning Series")
+              thumbnail: getCover("Deep Learning Series"),
             },
-            categories: ["AI", "Deep Learning"]
-          }
+            categories: ["AI", "Deep Learning"],
+          },
         },
         {
           volumeInfo: {
             title: "自然语言处理",
             previewLink: "https://ng-tech.icu/AI-Series/#/",
             imageLinks: {
-              thumbnail: getCover("NLP Series")
+              thumbnail: getCover("NLP Series"),
             },
-            categories: ["AI", "NLP"]
-          }
-        }
+            categories: ["AI", "NLP"],
+          },
+        },
       ];
       break;
     }
@@ -482,27 +516,47 @@ const getBooks = async book => {
             title: "产品设计",
             previewLink: "https://ng-tech.icu/Product-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Product Series")
+              thumbnail: getCover("Product Series"),
             },
-            categories: ["Product Series"]
-          }
+            categories: ["Product Series"],
+          },
+        },
+        {
+          volumeInfo: {
+            title: "创业",
+            previewLink: "https://ng-tech.icu/Business-Series/#/",
+            imageLinks: {
+              thumbnail: getCover("Business Series"),
+            },
+            categories: ["Business Series"],
+          },
         },
         {
           volumeInfo: {
             title: "行业迷思",
-            previewLink: "https://ng-tech.icu/Business-Series/#/",
+            previewLink: "https://ng-tech.icu/Industry-Series/#/",
             imageLinks: {
-              thumbnail: getCover("Business Series")
+              thumbnail: getCover("Industry Series"),
             },
-            categories: ["Business Series"]
-          }
-        }
+            categories: ["Industry Series"],
+          },
+        },
+        {
+          volumeInfo: {
+            title: "投资理财",
+            previewLink: "https://ng-tech.icu/Financial-Series/#/",
+            imageLinks: {
+              thumbnail: getCover("Financial Series"),
+            },
+            categories: ["Financial Series"],
+          },
+        },
       ];
       break;
     }
   }
 
-  data.forEach(d => {
+  data.forEach((d) => {
     d.volumeInfo.authors = ["月熊"];
   });
 
@@ -581,7 +635,7 @@ const drawListBook = async () => {
 };
 const updateFilter = ({ innerHTML }, f) => {
   document.getElementById("main").scrollIntoView({
-    behavior: "smooth"
+    behavior: "smooth",
   });
   let m;
   switch (f) {
@@ -601,7 +655,7 @@ const debounce = (fn, time, to = 0) => {
 searchBooks.addEventListener("input", () => debounce(drawListBook, 1000));
 
 let mainNavLinks = document.querySelectorAll(".scrolltoview");
-window.addEventListener("scroll", event => {
+window.addEventListener("scroll", (event) => {
   let fromTop = window.scrollY + 64;
   mainNavLinks.forEach(({ hash, classList }) => {
     if (!hash) {
@@ -657,7 +711,7 @@ const switchTheme = ({ target }) => {
 };
 toggleSwitch.addEventListener("change", switchTheme, false);
 let startIndex = 0;
-const next = subject => {
+const next = (subject) => {
   startIndex += 6;
   if (startIndex >= 0) {
     document.getElementById(`${subject}-prev`).style.display = "inline-flex";
@@ -666,7 +720,7 @@ const next = subject => {
     document.getElementById(`${subject}-prev`).style.display = "none";
   }
 };
-const prev = subject => {
+const prev = (subject) => {
   startIndex -= 6;
   if (startIndex <= 0) {
     startIndex = 0;
@@ -693,7 +747,7 @@ if (pwaInstalled) {
   document.getElementById("installPWA").style.display = "inline-flex";
 }
 let deferredPrompt = null;
-window.addEventListener("beforeinstallprompt", e => {
+window.addEventListener("beforeinstallprompt", (e) => {
   deferredPrompt = e;
 });
 async function installPWA() {
@@ -709,7 +763,7 @@ async function installPWA() {
     });
   }
 }
-window.addEventListener("appinstalled", evt => {
+window.addEventListener("appinstalled", (evt) => {
   localStorage.setItem("pwaInstalled", "yes");
   pwaInstalled = true;
   document.getElementById("installPWA").style.display = "none";
