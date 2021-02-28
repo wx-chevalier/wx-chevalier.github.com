@@ -595,6 +595,7 @@ const drawChartBook = async (subject, startIndex = 0) => {
       .join("");
   }
 };
+
 const drawListBook = async () => {
   if (searchBooks.value != "") {
     bookContainer.style.display = "flex";
@@ -652,7 +653,11 @@ const updateFilter = ({ innerHTML }, f) => {
 const debounce = (fn, time, to = 0) => {
   to ? clearTimeout(to) : (to = setTimeout(drawListBook, time));
 };
-searchBooks.addEventListener("input", () => debounce(drawListBook, 1000));
+
+// searchBooks.addEventListener("input", () => debounce(drawListBook, 1000));
+searchBooks.addEventListener("click", function name(params) {
+  window.location.href = "/search";
+});
 
 let mainNavLinks = document.querySelectorAll(".scrolltoview");
 window.addEventListener("scroll", (event) => {
