@@ -1,4 +1,4 @@
-# 熊堡
+# NGTE: Next-generation Technology Education
 
 本仓库仅存放有 [xCompass](https://github.com/wx-chevalier/xCompass) 等项目的编译后文件。
 
