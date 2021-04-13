@@ -358,6 +358,11 @@ article {
 	background-image: url("icons/Quantum-Gradient.svg");
 }
 
+.category:nth-child(5) {
+	background-color: #000000;
+	background-image: url("icons/Bullseye-Gradient.svg");
+}
+
 .list-book {
 	display: flex;
 	padding: 32px 16px;
